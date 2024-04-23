@@ -6,7 +6,7 @@ import {
   DesktopOutlined,
   TeamOutlined,
   UserOutlined,
-  SettingOutlined,
+  SettingOutlined ,
   QuestionCircleOutlined,
   ShopOutlined,
   ShoppingCartOutlined,
@@ -15,11 +15,10 @@ import {
   LineChartOutlined,
   HomeOutlined,
   TransactionOutlined,
-  TruckOutlined,
+  TruckOutlined
 } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Breadcrumb, Button, Layout, Menu, theme } from 'antd';
-import Title from 'antd/es/typography/Title';
 
 const { Header, Sider, Content, Footer } = Layout;
 
@@ -29,7 +28,7 @@ function getItem(
   label: React.ReactNode,
   key: React.Key,
   icon?: React.ReactNode,
-  children?: MenuItem[]
+  children?: MenuItem[],
 ): MenuItem {
   return {
     key,
@@ -42,12 +41,12 @@ function getItem(
 const items: MenuItem[] = [
   getItem('Overview', '1', <AppstoreOutlined />),
   getItem('Sale', '2', <TransactionOutlined />),
-  getItem('Products', 'sub1', <ShopOutlined />, [
+  getItem('Products', 'sub1', <ShopOutlined />,[
     getItem('Categories', '3'),
     getItem('Providers', '4'),
     getItem('Store Management', '5'),
   ]),
-  getItem('Orders', 'sub2', <ShoppingCartOutlined />, [
+  getItem('Orders', 'sub2', <ShoppingCartOutlined />,[
     getItem('Create Orders', '6'),
     getItem('List Orders', '7'),
     getItem('Orders Return', '8'),
@@ -58,6 +57,7 @@ const items: MenuItem[] = [
   getItem('Accounts', '12', <TeamOutlined />),
   getItem('Settings', '13', <SettingOutlined />),
   getItem('Help', '14', <QuestionCircleOutlined />),
+  
 ];
 
 const App: React.FC = () => {
@@ -69,11 +69,7 @@ const App: React.FC = () => {
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Sider trigger={null} collapsible collapsed={collapsed}>
-        <div className="demo-logo-vertical">
-          <Title style={{ color: 'white' }} level={3}>
-            Hello World
-          </Title>
-        </div>
+        <div className="demo-logo-vertical" />
         <Menu
           theme="dark"
           mode="inline"

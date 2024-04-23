@@ -9,8 +9,12 @@
   },
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^5.3.6",
+    "antd": "^5.16.2",
+    "babel-plugin-import": "^1.13.8",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-router-dom": "^6.22.3"
   },
   "devDependencies": {
     "@nx/cypress": "18.3.3",
